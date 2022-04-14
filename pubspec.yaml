@@ -2,20 +2,22 @@ name: up_income
 version: 1.0.0+1
 publish_to: none
 description: A new Flutter project.
-environment: 
+environment:
   sdk: '>=2.16.0 <3.0.0'
 
-dependencies: 
+dependencies:
   cupertino_icons: ^1.0.2
-  get: 4.6.1
-  flutter: 
+  flutter:
     sdk: flutter
+  flutter_dotenv: ^5.0.2
+  get: ^4.6.1
+  http: ^0.13.4
+  logger: ^1.1.0
 
-dev_dependencies: 
+dev_dependencies:
   flutter_lints: ^1.0.0
-  flutter_test: 
+  flutter_test:
     sdk: flutter
 
-flutter: 
+flutter:
   uses-material-design: true
-
