@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:up_income/app/utils/locale.dart';
 
 import 'app/routes/app_pages.dart';
 
@@ -15,6 +16,9 @@ void main() async {
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
       debugShowCheckedModeBanner: false,
+      translationsKeys: AppTranslation.translations,
+      locale: Locale('vi', 'VN'),
+      fallbackLocale: Locale('en', 'US'),
     ),
   );
 }
