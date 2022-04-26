@@ -10,13 +10,13 @@ class SplashController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    print('aaa');
-    _showApp();
   }
 
   @override
   void onReady() {
     super.onReady();
+    print('aaa');
+    _showApp();
   }
 
   @override
