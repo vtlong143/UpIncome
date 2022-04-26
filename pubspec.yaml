@@ -23,3 +23,10 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/png/
+    - assets/svg/
+    - assets/gif/
+    - assets/anim/
+    - .env.dev
+    - .env

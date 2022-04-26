@@ -10,6 +10,8 @@ class SplashController extends GetxController {
   @override
   void onInit() {
     super.onInit();
+    print('aaa');
+    _showApp();
   }
 
   @override
@@ -21,21 +23,28 @@ class SplashController extends GetxController {
   void onClose() {}
 
   void _showApp() async {
+    print('aaa');
     final value = GetStorage().read<String>(StorageBox.ShowOnboarding);
     if (value == 'shown') {
+      print('a');
       final token = GetStorage().read<String>(StorageBox.CurrentToken);
       if (token != null && token.length > 0) {
+        print('b');
         await Get.find<UserService>().setCurrentToken(token);
         if (!Get.find<UserService>().isAuthentication()) {
-          // Get.offAndToNamed(Routes.LOGIN);
+          Get.offAndToNamed(Routes.LOGIN);
           return;
         } else {
+          print('c');
           // Get.offAndToNamed(Routes.MAIN);
         }
       } else {
-        // Get.offAndToNamed(Routes.LOGIN);
+        print('d');
+        Get.offAndToNamed(Routes.LOGIN);
       }
     } else {
+      print('e');
+      Get.offAndToNamed(Routes.LOGIN);
       // Get.offAndToNamed(Routes.ONBOARDING);
       GetStorage().write(StorageBox.ShowOnboarding, 'shown');
     }
