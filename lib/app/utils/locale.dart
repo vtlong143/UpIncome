@@ -10,7 +10,10 @@ class LocaleKeys {
   static const general_logIn = 'general_logIn';
   static const general_phoneNumber = 'general_phoneNumber';
   static const general_passWord = 'general_passWord';
+  static const general_noAccount = 'general_noAccount';
   static const general_signUp = 'general_signUp';
+  static const general_name = 'general_name';
+  static const general_haveAccount = 'general_haveAccount';
   static const general_forgotPassword = 'general_forgotPassword';
   static const general_cancel = 'general_cancel';
   static const general_confirm = 'general_confirm';
@@ -34,7 +37,10 @@ class Locales {
     'general_logIn': 'Đăng nhập',
     'general_phoneNumber': 'Số điện thoại',
     'general_passWord': 'Mật khẩu',
+    'general_noAccount': 'Bạn không có tài khoản?',
     'general_signUp': 'Đăng ký',
+    'general_name': 'Tên',
+    'general_haveAccount': 'Đã có tài khoản?',
     'general_forgotPassword': 'Quên mật khẩu',
     'general_cancel': 'Huỷ',
     'general_confirm': 'Xác nhận',
