@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:up_income/app/data/api/user_provider.dart';
 import 'package:up_income/app/routes/app_pages.dart';
 import 'package:up_income/app/services/user_service.dart';
+import 'package:up_income/app/utils/locale.dart';
 
 class LoginController extends GetxController {
   //TODO: Implement LoginController

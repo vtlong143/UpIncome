@@ -3,6 +3,7 @@ import 'package:get_storage/get_storage.dart';
 import 'package:up_income/app/routes/app_pages.dart';
 import 'package:up_income/app/services/user_service.dart';
 import 'package:up_income/app/utils/constant.dart';
+import 'package:up_income/app/utils/locale.dart';
 
 class SplashController extends GetxController {
   //TODO: Implement SplashController
@@ -39,7 +40,7 @@ class SplashController extends GetxController {
       }
     } else {
       // Get.offAndToNamed(Routes.LOGIN);
-      Get.offAndToNamed(Routes.ONBOARDING);
+      Get.offAndToNamed(Routes.CHOOSE_LANGUAGE);
       GetStorage().write(StorageBox.ShowOnboarding, 'shown');
     }
   }

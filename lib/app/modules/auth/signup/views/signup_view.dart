@@ -37,11 +37,11 @@ class SignupView extends GetView<SignupController> {
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                    borderSide: BorderSide(color: Colors.blue),
+                    borderSide: BorderSide(color: Colors.lightBlueAccent),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                    borderSide: BorderSide(color: Colors.blue),
+                    borderSide: BorderSide(color: Colors.lightBlueAccent),
                   ),
                   hintText: LocaleKeys.general_name.tr,
                 ),
@@ -59,11 +59,11 @@ class SignupView extends GetView<SignupController> {
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                    borderSide: BorderSide(color: Colors.blue),
+                    borderSide: BorderSide(color: Colors.lightBlueAccent),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                    borderSide: BorderSide(color: Colors.blue),
+                    borderSide: BorderSide(color: Colors.lightBlueAccent),
                   ),
                   hintText: LocaleKeys.general_phoneNumber.tr,
                 ),
@@ -82,11 +82,11 @@ class SignupView extends GetView<SignupController> {
                   hintText: LocaleKeys.general_passWord.tr,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                    borderSide: BorderSide(color: Colors.blue),
+                    borderSide: BorderSide(color: Colors.lightBlueAccent),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                    borderSide: BorderSide(color: Colors.blue),
+                    borderSide: BorderSide(color: Colors.lightBlueAccent),
                   ),
                 ),
               ),
@@ -104,23 +104,23 @@ class SignupView extends GetView<SignupController> {
                 ),
               ),
               Spacer(),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    LocaleKeys.general_haveAccount.tr,
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Get.toNamed(Routes.LOGIN);
-                    },
-                    child: Text(
-                      LocaleKeys.general_logIn.tr,
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                ],
-              ),
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.center,
+              //   children: [
+              //     Text(
+              //       LocaleKeys.general_haveAccount.tr,
+              //     ),
+              //     GestureDetector(
+              //       onTap: () {
+              //         Get.toNamed(Routes.LOGIN);
+              //       },
+              //       child: Text(
+              //         LocaleKeys.general_logIn.tr,
+              //         style: TextStyle(fontWeight: FontWeight.bold),
+              //       ),
+              //     ),
+              //   ],
+              // ),
             ],
           ),
         ),

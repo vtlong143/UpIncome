@@ -25,7 +25,7 @@ class OnboardingView extends GetView<OnboardingController> {
                     controller: controller.pageController.value,
                     itemBuilder: (context, index) => OnboardingItem(
                       image:
-                          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTALoKu912x28CKXOlgVhCXNJBOV5KQuvnqjA&usqp=CAU',
+                          'https://i.pinimg.com/564x/3c/70/7d/3c707df82142f314d40afa2a4868ef48.jpg',
                       title:
                           'Page ${index + 1}: Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
                       description:

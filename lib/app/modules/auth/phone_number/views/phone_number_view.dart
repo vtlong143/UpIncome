@@ -1,12 +1,13 @@
+import 'package:country_codes/country_codes.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:up_income/app/routes/app_pages.dart';
 import 'package:up_income/app/utils/locale.dart';
 
-import '../controllers/login_controller.dart';
+import '../controllers/phone_number_controller.dart';
 
-class LoginView extends GetView<LoginController> {
+class PhoneNumberView extends GetView<PhoneNumberController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +21,7 @@ class LoginView extends GetView<LoginController> {
               Spacer(),
               Center(
                 child: Text(
-                  LocaleKeys.general_logIn.tr,
+                  LocaleKeys.general_enterPhoneNumber.tr,
                   style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                 ),
               ),
@@ -49,33 +50,9 @@ class LoginView extends GetView<LoginController> {
               SizedBox(
                 height: 16,
               ),
-              Text(LocaleKeys.general_passWord.tr),
-              SizedBox(
-                height: 8,
-              ),
-              TextField(
-                controller: controller.passwordController.value,
-                obscureText: true,
-                decoration: InputDecoration(
-                  hintText: LocaleKeys.general_passWord.tr,
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                    borderSide: BorderSide(color: Colors.lightBlueAccent),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                    borderSide: BorderSide(color: Colors.lightBlueAccent),
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 16,
-              ),
               Center(
                 child: ElevatedButton(
-                  onPressed: () {
-                    controller.login();
-                  },
+                  onPressed: () {},
                   child: Text(
                     LocaleKeys.general_logIn.tr,
                   ),
@@ -86,14 +63,14 @@ class LoginView extends GetView<LoginController> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    LocaleKeys.general_noAccount.tr,
+                    LocaleKeys.general_haveAccount.tr,
                   ),
                   GestureDetector(
                     onTap: () {
-                      Get.toNamed(Routes.PHONE_NUMBER);
+                      Get.toNamed(Routes.LOGIN);
                     },
                     child: Text(
-                      LocaleKeys.general_signUp.tr,
+                      LocaleKeys.general_logIn.tr,
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                   ),

@@ -18,8 +18,8 @@ void main() async {
       getPages: AppPages.routes,
       debugShowCheckedModeBanner: false,
       translationsKeys: AppTranslation.translations,
-      locale: Locale('vi', 'VN'),
-      fallbackLocale: Locale('en', 'US'),
+      locale: AppTranslation.locale,
+      fallbackLocale: Locale('vi', 'VN'),
     ),
   );
 }
@@ -28,7 +28,8 @@ class MyHttpOverrides extends HttpOverrides {
   @override
   HttpClient createHttpClient(SecurityContext? context) {
     return super.createHttpClient(context)
-      ..badCertificateCallback = (X509Certificate cert, String host, int port) => true;
+      ..badCertificateCallback =
+          (X509Certificate cert, String host, int port) => true;
   }
 }
 
