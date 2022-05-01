@@ -1,9 +1,10 @@
+import 'dart:convert';
+
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:up_income/app/data/api/user_provider.dart';
 import 'package:up_income/app/routes/app_pages.dart';
 import 'package:up_income/app/services/user_service.dart';
-import 'package:up_income/app/utils/locale.dart';
 
 class LoginController extends GetxController {
   //TODO: Implement LoginController
@@ -29,11 +30,13 @@ class LoginController extends GetxController {
     final response =
         await UserProvider.instance.loginByPassword(phoneNumber, password);
     if (response.error.isEmpty) {
-      // print(response.data['data']['accessToken']);
+      // print(response.data['access_token']);
+      var token = jsonDecode(response.data)['access_token'];
+      var refreshToken = jsonDecode(response.data)['refresh_token'];
       // if (response.data['data']['isActive']) {
-      Get.offAllNamed(Routes.ONBOARDING);
-      // Get.find<UserService>()
-      //     .setCurrentToken(response.data['data']['accessToken']);
+      Get.offAllNamed(Routes.MAIN);
+      Get.find<UserService>().setCurrentToken(token);
+      Get.find<UserService>().setRefreshToken(refreshToken);
       // } else {}
     } else {
       print(response.error);

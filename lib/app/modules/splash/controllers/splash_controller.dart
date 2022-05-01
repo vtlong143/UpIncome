@@ -32,14 +32,12 @@ class SplashController extends GetxController {
           Get.offAndToNamed(Routes.LOGIN);
           return;
         } else {
-          // Get.offAndToNamed(Routes.MAIN);
+          Get.offAndToNamed(Routes.MAIN);
         }
       } else {
-        Get.offAndToNamed(Routes.ONBOARDING);
-        // Get.offAndToNamed(Routes.LOGIN);
+        Get.offAndToNamed(Routes.LOGIN);
       }
     } else {
-      // Get.offAndToNamed(Routes.LOGIN);
       Get.offAndToNamed(Routes.CHOOSE_LANGUAGE);
       GetStorage().write(StorageBox.ShowOnboarding, 'shown');
     }

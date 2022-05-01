@@ -32,12 +32,7 @@ class SignupController extends GetxController {
     final response = await UserProvider.instance
         .signupByPassword(name, phoneNumber, password);
     if (response.error.isEmpty) {
-      // print(response.data['data']['accessToken']);
-      // if (response.data['data']['isActive']) {
-      Get.offAllNamed(Routes.MAIN);
-      // Get.find<UserService>()
-      //     .setCurrentToken(response.data['data']['accessToken']);
-      // } else {}
+      Get.offAllNamed(Routes.LOGIN);
     } else {
       print(response.error);
     }

@@ -29,6 +29,13 @@ class LocaleKeys {
   static const general_haveAccount = 'general_haveAccount';
   static const general_forgotPassword = 'general_forgotPassword';
   static const general_enterPhoneNumber = 'general_enterPhoneNumber';
+  static const general_sendOTP = 'general_sendOTP';
+  static const general_enterOTP = 'general_enterOTP';
+  static const general_confirm = 'general_confirm';
+  static const general_notreceiveOTP = 'general_notreceiveOTP';
+  static const general_resendOTP = 'general_resendOTP';
+  static const general_newPassword = 'general_newPassword';
+  static const general_reenternewPassword = 'general_reenternewPassword';
   static const monday = 'Monday';
   static const tuesday = 'Tuesday';
   static const wednesday = 'Wednesday';
@@ -47,8 +54,15 @@ class Locales {
     'general_signUp': 'Sign Up',
     'general_name': 'Name',
     'general_haveAccount': 'Already have an account?',
-    'general_forgotPassword': 'Forgot password',
-    'general_enterPhoneNumber': 'Enter your phone number'
+    'general_forgotPassword': 'Forgot password?',
+    'general_enterPhoneNumber': 'Enter your phone number',
+    'general_sendOTP': 'Send OTP',
+    'general_enterOTP': 'Enter OTP',
+    'general_confirm': 'Confirm',
+    'general_notreceiveOTP': 'Didn\'t receive OTP?',
+    'general_resendOTP': 'Resend',
+    'general_newPassword': 'New password',
+    'general_reenternewPassword': 'Re-enter new password',
   };
   static const vi_VN = {
     'general_logIn': 'Đăng nhập',
@@ -58,8 +72,15 @@ class Locales {
     'general_signUp': 'Đăng ký',
     'general_name': 'Tên',
     'general_haveAccount': 'Đã có tài khoản?',
-    'general_forgotPassword': 'Quên mật khẩu',
+    'general_forgotPassword': 'Quên mật khẩu?',
     'general_enterPhoneNumber': 'Nhập số điện thoại',
+    'general_sendOTP': 'Gửi mã OTP',
+    'general_enterOTP': 'Nhập mã OTP',
+    'general_confirm': 'Xác nhận',
+    'general_notreceiveOTP': 'Bạn chưa nhận được mã OTP?',
+    'general_resendOTP': 'Gửi lại',
+    'general_newPassword': 'Mật khẩu mới',
+    'general_reenternewPassword': 'Nhập lại mật khẩu mới',
     'Monday': 'Thứ 2',
     'Tuesday': 'Thứ 3',
     'Wednesday': 'Thứ 4',

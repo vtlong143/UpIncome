@@ -4,9 +4,9 @@ import 'package:get/get.dart';
 import 'package:up_income/app/routes/app_pages.dart';
 import 'package:up_income/app/utils/locale.dart';
 
-import '../controllers/login_controller.dart';
+import '../controllers/forgot_password_controller.dart';
 
-class LoginView extends GetView<LoginController> {
+class ForgotPasswordView extends GetView<ForgotPasswordController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,20 +20,20 @@ class LoginView extends GetView<LoginController> {
               Spacer(),
               Center(
                 child: Text(
-                  LocaleKeys.general_logIn.tr,
+                  LocaleKeys.general_passWord.tr,
                   style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                 ),
               ),
               SizedBox(
                 height: 32,
               ),
-              Text(LocaleKeys.general_phoneNumber.tr),
+              Text(LocaleKeys.general_newPassword.tr),
               SizedBox(
                 height: 8,
               ),
               TextField(
-                controller: controller.phoneController.value,
-                keyboardType: TextInputType.phone,
+                controller: controller.newPasswordController.value,
+                obscureText: true,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(5.0)),
@@ -43,21 +43,21 @@ class LoginView extends GetView<LoginController> {
                     borderRadius: BorderRadius.all(Radius.circular(5.0)),
                     borderSide: BorderSide(color: Colors.lightBlueAccent),
                   ),
-                  hintText: LocaleKeys.general_phoneNumber.tr,
+                  hintText: LocaleKeys.general_newPassword.tr,
                 ),
               ),
               SizedBox(
                 height: 16,
               ),
-              Text(LocaleKeys.general_passWord.tr),
+              Text(LocaleKeys.general_reenternewPassword.tr),
               SizedBox(
                 height: 8,
               ),
               TextField(
-                controller: controller.passwordController.value,
+                controller: controller.reenterPasswordController.value,
                 obscureText: true,
                 decoration: InputDecoration(
-                  hintText: LocaleKeys.general_passWord.tr,
+                  hintText: LocaleKeys.general_reenternewPassword.tr,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(5.0)),
                     borderSide: BorderSide(color: Colors.lightBlueAccent),
@@ -66,18 +66,6 @@ class LoginView extends GetView<LoginController> {
                     borderRadius: BorderRadius.all(Radius.circular(5.0)),
                     borderSide: BorderSide(color: Colors.lightBlueAccent),
                   ),
-                ),
-              ),
-              SizedBox(
-                height: 8,
-              ),
-              GestureDetector(
-                onTap: () {
-                  Get.toNamed(Routes.PHONE_NUMBER);
-                },
-                child: Text(
-                  LocaleKeys.general_forgotPassword.tr,
-                  style: TextStyle(color: Colors.lightBlueAccent),
                 ),
               ),
               SizedBox(
@@ -86,32 +74,14 @@ class LoginView extends GetView<LoginController> {
               Center(
                 child: ElevatedButton(
                   onPressed: () {
-                    controller.login();
+                    controller.resetPassword();
                   },
                   child: Text(
-                    LocaleKeys.general_logIn.tr,
+                    LocaleKeys.general_confirm.tr,
                   ),
                 ),
               ),
               Spacer(),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    LocaleKeys.general_noAccount.tr,
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Get.toNamed(Routes.PHONE_NUMBER,
-                          arguments: {"isSignUp": true});
-                    },
-                    child: Text(
-                      LocaleKeys.general_signUp.tr,
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                ],
-              ),
             ],
           ),
         ),

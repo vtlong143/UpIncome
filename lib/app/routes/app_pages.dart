@@ -1,5 +1,9 @@
 import 'package:get/get.dart';
 
+import '../modules/auth/check_otp/bindings/check_otp_binding.dart';
+import '../modules/auth/check_otp/views/check_otp_view.dart';
+import '../modules/auth/forgot_password/bindings/forgot_password_binding.dart';
+import '../modules/auth/forgot_password/views/forgot_password_view.dart';
 import '../modules/auth/login/bindings/login_binding.dart';
 import '../modules/auth/login/views/login_view.dart';
 import '../modules/auth/phone_number/bindings/phone_number_binding.dart';
@@ -64,6 +68,16 @@ class AppPages {
       name: _Paths.PHONE_NUMBER,
       page: () => PhoneNumberView(),
       binding: PhoneNumberBinding(),
+    ),
+    GetPage(
+      name: _Paths.CHECK_OTP,
+      page: () => CheckOtpView(),
+      binding: CheckOtpBinding(),
+    ),
+    GetPage(
+      name: _Paths.FORGOT_PASSWORD,
+      page: () => ForgotPasswordView(),
+      binding: ForgotPasswordBinding(),
     ),
   ];
 }

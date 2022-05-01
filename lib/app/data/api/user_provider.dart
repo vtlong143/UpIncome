@@ -15,10 +15,24 @@ class UserProvider extends BaseProvider {
       POST('login', {"phoneNumber": phoneNumber, "password": password});
   Future<ApiResult> signupByPassword(
           String name, String phoneNumber, String password) async =>
-      POST('user/save', {
-        "id": 301,
-        "name": name,
+      POST('user/save',
+          {"name": name, "phoneNumber": phoneNumber, "password": password});
+
+  Future<ApiResult> sendOTP(String phoneNumber) async => POST('sms/sendOtp', {
         "phoneNumber": phoneNumber,
-        "password": password
+      });
+
+  Future<ApiResult> confirmOTP(int otp, String phoneNumber) async =>
+      POST('sms/verifyOtp', {
+        "otp": otp,
+        "phoneNumber": phoneNumber,
+      });
+
+  Future<ApiResult> resetPassword(
+          int otp, String phoneNumber, String password) async =>
+      POST('user/resetPw', {
+        "otp": otp,
+        "password": password,
+        "phoneNumber": phoneNumber,
       });
 }

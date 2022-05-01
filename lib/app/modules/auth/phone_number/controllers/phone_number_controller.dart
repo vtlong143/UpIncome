@@ -1,19 +1,34 @@
-import 'package:country_codes/country_codes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:up_income/app/data/api/user_provider.dart';
+import 'package:up_income/app/routes/app_pages.dart';
 
 class PhoneNumberController extends GetxController {
   //TODO: Implement PhoneNumberController
   final phoneController = TextEditingController().obs;
+  final dialCode = ''.obs;
   @override
   void onInit() async {
     super.onInit();
-    await CountryCodes.init();
   }
 
   @override
   void onReady() {
     super.onReady();
+  }
+
+  Future<void> sendOTP(
+    String phoneNumber,
+  ) async {
+    final response = await UserProvider.instance.sendOTP(phoneNumber);
+    if (response.error.isEmpty) {
+      Get.offAllNamed(Routes.CHECK_OTP, arguments: {
+        "phoneNumber": '${dialCode.value}${phoneController.value.text.trim()}',
+        "isSignUp": Get.arguments ?? false
+      });
+    } else {
+      print(response.error);
+    }
   }
 
   @override

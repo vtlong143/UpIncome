@@ -9,6 +9,11 @@ class UserService extends GetxService {
     await GetStorage().write(StorageBox.CurrentToken, token);
   }
 
+  Future<void> setRefreshToken(String token) async {
+    global.refreshToken = token;
+    await GetStorage().write(StorageBox.RefreshToken, token);
+  }
+
   bool isAuthentication() {
     return global.accessToken.isNotEmpty;
   }

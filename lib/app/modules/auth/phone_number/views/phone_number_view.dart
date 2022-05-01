@@ -1,7 +1,7 @@
-import 'package:country_codes/country_codes.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 import 'package:up_income/app/routes/app_pages.dart';
 import 'package:up_income/app/utils/locale.dart';
 
@@ -32,29 +32,39 @@ class PhoneNumberView extends GetView<PhoneNumberController> {
               SizedBox(
                 height: 8,
               ),
-              TextField(
-                controller: controller.phoneController.value,
-                keyboardType: TextInputType.phone,
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                    borderSide: BorderSide(color: Colors.lightBlueAccent),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                    borderSide: BorderSide(color: Colors.lightBlueAccent),
-                  ),
-                  hintText: LocaleKeys.general_phoneNumber.tr,
+              InternationalPhoneNumberInput(
+                hintText: LocaleKeys.general_phoneNumber.tr,
+                onInputChanged: (PhoneNumber number) {
+                  print(number.phoneNumber);
+                  controller.dialCode.value = number.dialCode!;
+                },
+                onInputValidated: (bool value) {
+                  print(value);
+                },
+                selectorConfig: SelectorConfig(
+                  selectorType: PhoneInputSelectorType.DROPDOWN,
+                  setSelectorButtonAsPrefixIcon: true,
                 ),
+                selectorTextStyle: TextStyle(color: Colors.black),
+                initialValue: PhoneNumber(isoCode: 'VN'),
+                textFieldController: controller.phoneController.value,
+                formatInput: false,
+                inputBorder: OutlineInputBorder(),
+                onSaved: (PhoneNumber number) {
+                  print('On Saved: $number');
+                },
               ),
               SizedBox(
                 height: 16,
               ),
               Center(
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    controller.sendOTP(
+                        '${controller.dialCode.value}${controller.phoneController.value.text.trim()}');
+                  },
                   child: Text(
-                    LocaleKeys.general_logIn.tr,
+                    LocaleKeys.general_sendOTP.tr,
                   ),
                 ),
               ),

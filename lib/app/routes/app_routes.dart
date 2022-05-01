@@ -11,6 +11,8 @@ abstract class Routes {
   static const ONBOARDING = _Paths.ONBOARDING;
   static const CHOOSE_LANGUAGE = _Paths.CHOOSE_LANGUAGE;
   static const PHONE_NUMBER = _Paths.PHONE_NUMBER;
+  static const CHECK_OTP = _Paths.CHECK_OTP;
+  static const FORGOT_PASSWORD = _Paths.FORGOT_PASSWORD;
 }
 
 abstract class _Paths {
@@ -23,4 +25,6 @@ abstract class _Paths {
   static const ONBOARDING = '/onboarding';
   static const CHOOSE_LANGUAGE = '/choose-language';
   static const PHONE_NUMBER = '/phone-number';
+  static const CHECK_OTP = '/check-otp';
+  static const FORGOT_PASSWORD = '/forgot-password';
 }
