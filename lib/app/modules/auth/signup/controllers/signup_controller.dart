@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:up_income/app/data/api/user_provider.dart';
 import 'package:up_income/app/routes/app_pages.dart';
-import 'package:up_income/app/services/user_service.dart';
 
 class SignupController extends GetxController {
   //TODO: Implement SignupController

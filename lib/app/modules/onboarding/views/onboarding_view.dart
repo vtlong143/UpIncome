@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 
 import 'package:get/get.dart';
 
@@ -47,7 +46,7 @@ class OnboardingView extends GetView<OnboardingController> {
                           ),
                         )),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   SizedBox(
                     height: 60,
                     width: 60,
@@ -56,9 +55,9 @@ class OnboardingView extends GetView<OnboardingController> {
                         controller.nextPage();
                       },
                       style: ElevatedButton.styleFrom(
-                        shape: CircleBorder(),
+                        shape: const CircleBorder(),
                       ),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_right_alt_outlined,
                         color: Colors.white,
                       ),
@@ -109,25 +108,25 @@ class OnboardingItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Spacer(),
+        const Spacer(),
         Image.network(image),
-        Spacer(),
+        const Spacer(),
         Text(
           title,
           textAlign: TextAlign.center,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 16,
         ),
         Text(
           description,
           textAlign: TextAlign.center,
         ),
-        Spacer(),
+        const Spacer(),
       ],
     );
   }

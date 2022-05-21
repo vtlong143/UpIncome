@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'package:get/get.dart';
-import 'package:up_income/app/modules/auth/phone_number/controllers/phone_number_controller.dart';
 import 'package:up_income/app/utils/locale.dart';
 
 import '../controllers/check_otp_controller.dart';
@@ -13,19 +12,19 @@ class CheckOtpView extends GetView<CheckOtpController> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.all(16),
+          padding: const EdgeInsets.all(16),
           height: MediaQuery.of(context).size.height,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Spacer(),
+              const Spacer(),
               Center(
                 child: Text(
                   LocaleKeys.general_enterOTP.tr,
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 32,
               ),
               Row(
@@ -41,7 +40,7 @@ class CheckOtpView extends GetView<CheckOtpController> {
                           FocusScope.of(context).nextFocus();
                         }
                       },
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(5.0)),
                           borderSide: BorderSide(color: Colors.lightBlueAccent),
@@ -70,7 +69,7 @@ class CheckOtpView extends GetView<CheckOtpController> {
                           FocusScope.of(context).nextFocus();
                         }
                       },
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(5.0)),
                           borderSide: BorderSide(color: Colors.lightBlueAccent),
@@ -99,7 +98,7 @@ class CheckOtpView extends GetView<CheckOtpController> {
                           FocusScope.of(context).nextFocus();
                         }
                       },
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(5.0)),
                           borderSide: BorderSide(color: Colors.lightBlueAccent),
@@ -128,7 +127,7 @@ class CheckOtpView extends GetView<CheckOtpController> {
                           FocusScope.of(context).nextFocus();
                         }
                       },
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(5.0)),
                           borderSide: BorderSide(color: Colors.lightBlueAccent),
@@ -157,7 +156,7 @@ class CheckOtpView extends GetView<CheckOtpController> {
                           FocusScope.of(context).nextFocus();
                         }
                       },
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(5.0)),
                           borderSide: BorderSide(color: Colors.lightBlueAccent),
@@ -186,7 +185,7 @@ class CheckOtpView extends GetView<CheckOtpController> {
                           FocusScope.of(context).nextFocus();
                         }
                       },
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(5.0)),
                           borderSide: BorderSide(color: Colors.lightBlueAccent),
@@ -207,7 +206,7 @@ class CheckOtpView extends GetView<CheckOtpController> {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16,
               ),
               Row(
@@ -222,12 +221,12 @@ class CheckOtpView extends GetView<CheckOtpController> {
                     },
                     child: Text(
                       LocaleKeys.general_resendOTP.tr,
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      style: const TextStyle(fontWeight: FontWeight.bold),
                     ),
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16,
               ),
               Center(
@@ -240,7 +239,7 @@ class CheckOtpView extends GetView<CheckOtpController> {
                   ),
                 ),
               ),
-              Spacer(),
+              const Spacer(),
             ],
           ),
         ),

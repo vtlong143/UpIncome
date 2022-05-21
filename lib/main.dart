@@ -19,7 +19,7 @@ void main() async {
       debugShowCheckedModeBanner: false,
       translationsKeys: AppTranslation.translations,
       locale: AppTranslation.locale,
-      fallbackLocale: Locale('vi', 'VN'),
+      fallbackLocale: const Locale('vi', 'VN'),
     ),
   );
 }

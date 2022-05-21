@@ -12,45 +12,45 @@ class LoginView extends GetView<LoginController> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.all(16),
+          padding: const EdgeInsets.all(16),
           height: MediaQuery.of(context).size.height,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Spacer(),
+              const Spacer(),
               Center(
                 child: Text(
                   LocaleKeys.general_logIn.tr,
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 32,
               ),
               Text(LocaleKeys.general_phoneNumber.tr),
-              SizedBox(
+              const SizedBox(
                 height: 8,
               ),
               TextField(
                 controller: controller.phoneController.value,
                 keyboardType: TextInputType.phone,
                 decoration: InputDecoration(
-                  border: OutlineInputBorder(
+                  border: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(5.0)),
                     borderSide: BorderSide(color: Colors.lightBlueAccent),
                   ),
-                  focusedBorder: OutlineInputBorder(
+                  focusedBorder: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(5.0)),
                     borderSide: BorderSide(color: Colors.lightBlueAccent),
                   ),
                   hintText: LocaleKeys.general_phoneNumber.tr,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16,
               ),
               Text(LocaleKeys.general_passWord.tr),
-              SizedBox(
+              const SizedBox(
                 height: 8,
               ),
               TextField(
@@ -58,17 +58,17 @@ class LoginView extends GetView<LoginController> {
                 obscureText: true,
                 decoration: InputDecoration(
                   hintText: LocaleKeys.general_passWord.tr,
-                  border: OutlineInputBorder(
+                  border: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(5.0)),
                     borderSide: BorderSide(color: Colors.lightBlueAccent),
                   ),
-                  focusedBorder: OutlineInputBorder(
+                  focusedBorder: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(5.0)),
                     borderSide: BorderSide(color: Colors.lightBlueAccent),
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 8,
               ),
               GestureDetector(
@@ -77,10 +77,10 @@ class LoginView extends GetView<LoginController> {
                 },
                 child: Text(
                   LocaleKeys.general_forgotPassword.tr,
-                  style: TextStyle(color: Colors.lightBlueAccent),
+                  style: const TextStyle(color: Colors.lightBlueAccent),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16,
               ),
               Center(
@@ -93,7 +93,7 @@ class LoginView extends GetView<LoginController> {
                   ),
                 ),
               ),
-              Spacer(),
+              const Spacer(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -107,7 +107,7 @@ class LoginView extends GetView<LoginController> {
                     },
                     child: Text(
                       LocaleKeys.general_signUp.tr,
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      style: const TextStyle(fontWeight: FontWeight.bold),
                     ),
                   ),
                 ],
