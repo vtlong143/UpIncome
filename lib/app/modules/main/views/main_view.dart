@@ -9,10 +9,10 @@ class MainView extends GetView<MainController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('MainView'),
+        title: const Text('MainView'),
         centerTitle: true,
       ),
-      body: Center(
+      body: const Center(
         child: Text(
           'MainView is working',
           style: TextStyle(fontSize: 20),

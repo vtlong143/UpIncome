@@ -12,7 +12,7 @@ class SplashView extends GetView<SplashController> {
         child: Center(
           child: SizedBox(
             width: MediaQuery.of(context).size.width / 2,
-            child: Text('/'),
+            child: const Text('/'),
           ),
         ),
       ),

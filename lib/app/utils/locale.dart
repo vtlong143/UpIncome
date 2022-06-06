@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:up_income/app/utils/constant.dart';
 
@@ -8,8 +7,8 @@ class AppTranslation {
       languageCode[GetStorage().read<String>(StorageBox.Language)];
 
   static Map<String, Locale> languageCode = {
-    'en_US': Locale('en', 'US'),
-    'vi_VN': Locale('vi', 'VN'),
+    'en_US': const Locale('en', 'US'),
+    'vi_VN': const Locale('vi', 'VN'),
   };
 
   static Map<String, Map<String, String>> translations = {

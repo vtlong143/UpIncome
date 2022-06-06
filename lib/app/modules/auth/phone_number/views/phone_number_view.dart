@@ -13,23 +13,24 @@ class PhoneNumberView extends GetView<PhoneNumberController> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.all(16),
+          padding: const EdgeInsets.all(16),
           height: MediaQuery.of(context).size.height,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Spacer(),
+              const Spacer(),
               Center(
                 child: Text(
                   LocaleKeys.general_enterPhoneNumber.tr,
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  style: const TextStyle(
+                      fontSize: 24, fontWeight: FontWeight.bold),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 32,
               ),
               Text(LocaleKeys.general_phoneNumber.tr),
-              SizedBox(
+              const SizedBox(
                 height: 8,
               ),
               InternationalPhoneNumberInput(
@@ -41,15 +42,15 @@ class PhoneNumberView extends GetView<PhoneNumberController> {
                 onInputValidated: (bool value) {
                   print(value);
                 },
-                selectorConfig: SelectorConfig(
+                selectorConfig: const SelectorConfig(
                   selectorType: PhoneInputSelectorType.DROPDOWN,
                   setSelectorButtonAsPrefixIcon: true,
                 ),
-                selectorTextStyle: TextStyle(color: Colors.black),
+                selectorTextStyle: const TextStyle(color: Colors.black),
                 initialValue: PhoneNumber(isoCode: 'VN'),
                 textFieldController: controller.phoneController.value,
                 formatInput: false,
-                inputBorder: OutlineInputBorder(),
+                inputBorder: const OutlineInputBorder(),
                 onSaved: (PhoneNumber number) {
                   print('On Saved: $number');
                 },
@@ -65,7 +66,7 @@ class PhoneNumberView extends GetView<PhoneNumberController> {
                       )
                     : Container(),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16,
               ),
               Center(
@@ -79,7 +80,7 @@ class PhoneNumberView extends GetView<PhoneNumberController> {
                   ),
                 ),
               ),
-              Spacer(),
+              const Spacer(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -92,7 +93,7 @@ class PhoneNumberView extends GetView<PhoneNumberController> {
                     },
                     child: Text(
                       LocaleKeys.general_logIn.tr,
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      style: const TextStyle(fontWeight: FontWeight.bold),
                     ),
                   ),
                 ],

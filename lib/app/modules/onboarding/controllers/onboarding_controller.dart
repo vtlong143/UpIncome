@@ -19,7 +19,7 @@ class OnboardingController extends GetxController {
 
   void nextPage() {
     pageController.value
-        .nextPage(duration: Duration(milliseconds: 300), curve: Curves.ease);
+        .nextPage(duration: const Duration(milliseconds: 300), curve: Curves.ease);
     if (pageIndex.value == 2) {
       Get.toNamed(Routes.LOGIN);
     }
