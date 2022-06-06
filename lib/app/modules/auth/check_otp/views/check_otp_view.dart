@@ -207,6 +207,17 @@ class CheckOtpView extends GetView<CheckOtpController> {
                   ),
                 ],
               ),
+              Obx(
+                () => controller.wrongOTP.value
+                    ? Container(
+                        margin: EdgeInsets.only(top: 8),
+                        child: Text(
+                          LocaleKeys.general_wrongOTP.tr,
+                          style: TextStyle(color: Colors.redAccent),
+                        ),
+                      )
+                    : Container(),
+              ),
               SizedBox(
                 height: 16,
               ),

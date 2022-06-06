@@ -54,6 +54,7 @@ class SignupView extends GetView<SignupController> {
                 height: 8,
               ),
               TextField(
+                readOnly: true,
                 controller: controller.phoneController.value,
                 keyboardType: TextInputType.phone,
                 decoration: InputDecoration(
@@ -89,6 +90,17 @@ class SignupView extends GetView<SignupController> {
                     borderSide: BorderSide(color: Colors.lightBlueAccent),
                   ),
                 ),
+              ),
+              Obx(
+                () => controller.cantSignup.value
+                    ? Container(
+                        margin: EdgeInsets.only(top: 8),
+                        child: Text(
+                          LocaleKeys.general_cantSignup.tr,
+                          style: TextStyle(color: Colors.redAccent),
+                        ),
+                      )
+                    : Container(),
               ),
               SizedBox(
                 height: 16,

@@ -7,6 +7,7 @@ class ForgotPasswordController extends GetxController {
   //TODO: Implement ForgotPasswordController
   final newPasswordController = TextEditingController().obs;
   final reenterPasswordController = TextEditingController().obs;
+  final wrongPassword = false.obs;
   @override
   void onInit() {
     super.onInit();
@@ -18,6 +19,11 @@ class ForgotPasswordController extends GetxController {
   }
 
   Future<void> resetPassword() async {
+    if (newPasswordController.value.text !=
+        reenterPasswordController.value.text) {
+      wrongPassword.value = true;
+      return;
+    }
     final response = await UserProvider.instance.resetPassword(
         Get.arguments['otp'],
         Get.arguments['phoneNumber'],

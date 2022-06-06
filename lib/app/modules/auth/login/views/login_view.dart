@@ -68,6 +68,17 @@ class LoginView extends GetView<LoginController> {
                   ),
                 ),
               ),
+              Obx(
+                () => controller.cantLogin.value
+                    ? Container(
+                        margin: EdgeInsets.only(top: 8),
+                        child: Text(
+                          LocaleKeys.general_cantlogIn.tr,
+                          style: TextStyle(color: Colors.redAccent),
+                        ),
+                      )
+                    : Container(),
+              ),
               SizedBox(
                 height: 8,
               ),

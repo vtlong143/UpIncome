@@ -68,6 +68,17 @@ class ForgotPasswordView extends GetView<ForgotPasswordController> {
                   ),
                 ),
               ),
+              Obx(
+                () => controller.wrongPassword.value
+                    ? Container(
+                        margin: EdgeInsets.only(top: 8),
+                        child: Text(
+                          LocaleKeys.general_wrongPassword.tr,
+                          style: TextStyle(color: Colors.redAccent),
+                        ),
+                      )
+                    : Container(),
+              ),
               SizedBox(
                 height: 16,
               ),

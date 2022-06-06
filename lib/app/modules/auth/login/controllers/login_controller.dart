@@ -10,6 +10,7 @@ class LoginController extends GetxController {
   //TODO: Implement LoginController
   final phoneController = TextEditingController().obs;
   final passwordController = TextEditingController().obs;
+  final cantLogin = false.obs;
   @override
   void onInit() {
     super.onInit();
@@ -39,6 +40,7 @@ class LoginController extends GetxController {
       Get.find<UserService>().setRefreshToken(refreshToken);
       // } else {}
     } else {
+      cantLogin.value = true;
       print(response.error);
     }
   }

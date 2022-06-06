@@ -10,9 +10,11 @@ class SignupController extends GetxController {
   final nameController = TextEditingController().obs;
   final phoneController = TextEditingController().obs;
   final passwordController = TextEditingController().obs;
+  final cantSignup = false.obs;
   @override
   void onInit() {
     super.onInit();
+    phoneController.value.text = Get.arguments["phoneNumber"];
   }
 
   @override
@@ -34,6 +36,7 @@ class SignupController extends GetxController {
     if (response.error.isEmpty) {
       Get.offAllNamed(Routes.LOGIN);
     } else {
+      cantSignup.value = true;
       print(response.error);
     }
   }

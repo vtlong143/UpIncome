@@ -7,9 +7,11 @@ class CheckOtpController extends GetxController {
   final otp = List<String>.filled(6, '').obs;
   final phoneNumber = ''.obs;
   final isSignUp = false.obs;
+  final wrongOTP = false.obs;
   @override
   void onInit() {
     super.onInit();
+    print(Get.arguments);
     phoneNumber.value = Get.arguments['phoneNumber'];
     isSignUp.value = Get.arguments['isSignUp'] ?? false;
   }
@@ -27,8 +29,14 @@ class CheckOtpController extends GetxController {
     }
     final response =
         await UserProvider.instance.confirmOTP(otp, phoneNumber.value);
+    if (response.data == "InCorrect OTP") {
+      wrongOTP.value = true;
+      return;
+    }
     if (response.error.isEmpty) {
-      Get.offAllNamed(Routes.SIGNUP);
+      Get.offAllNamed(Routes.SIGNUP, arguments: {
+        "phoneNumber": phoneNumber.value,
+      });
     } else {
       print(response.error);
     }

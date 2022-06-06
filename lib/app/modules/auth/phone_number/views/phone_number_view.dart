@@ -54,6 +54,17 @@ class PhoneNumberView extends GetView<PhoneNumberController> {
                   print('On Saved: $number');
                 },
               ),
+              Obx(
+                () => controller.cantSendOTP.value
+                    ? Container(
+                        margin: EdgeInsets.only(top: 8),
+                        child: Text(
+                          LocaleKeys.general_wrongPhoneNumber.tr,
+                          style: TextStyle(color: Colors.redAccent),
+                        ),
+                      )
+                    : Container(),
+              ),
               SizedBox(
                 height: 16,
               ),

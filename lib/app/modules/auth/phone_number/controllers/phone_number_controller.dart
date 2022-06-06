@@ -7,6 +7,7 @@ class PhoneNumberController extends GetxController {
   //TODO: Implement PhoneNumberController
   final phoneController = TextEditingController().obs;
   final dialCode = ''.obs;
+  final cantSendOTP = false.obs;
   @override
   void onInit() async {
     super.onInit();
@@ -24,9 +25,12 @@ class PhoneNumberController extends GetxController {
     if (response.error.isEmpty) {
       Get.offAllNamed(Routes.CHECK_OTP, arguments: {
         "phoneNumber": '${dialCode.value}${phoneController.value.text.trim()}',
-        "isSignUp": Get.arguments ?? false
+        "isSignUp": Get.arguments == null || Get.arguments["isSignUp"] == null
+            ? false
+            : Get.arguments["isSignUp"]
       });
     } else {
+      cantSendOTP.value = true;
       print(response.error);
     }
   }
