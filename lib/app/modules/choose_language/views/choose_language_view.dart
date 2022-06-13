@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:up_income/app/routes/app_pages.dart';
+import 'package:up_income/app/themes/colors.dart';
 import 'package:up_income/app/utils/constant.dart';
 
 import '../controllers/choose_language_controller.dart';
@@ -26,7 +27,7 @@ class ChooseLanguageView extends GetView<ChooseLanguageController> {
                 padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(16),
-                  border: Border.all(color: Colors.lightBlueAccent),
+                  border: Border.all(color: colorBlue),
                 ),
                 child: GestureDetector(
                   onTap: () {
@@ -47,7 +48,7 @@ class ChooseLanguageView extends GetView<ChooseLanguageController> {
                 padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(16),
-                  border: Border.all(color: Colors.lightBlueAccent),
+                  border: Border.all(color: colorBlue),
                 ),
                 child: GestureDetector(
                   onTap: () {

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'package:get/get.dart';
+import 'package:up_income/app/themes/colors.dart';
 import 'package:up_income/app/utils/locale.dart';
 
 import '../controllers/check_otp_controller.dart';
@@ -44,11 +45,11 @@ class CheckOtpView extends GetView<CheckOtpController> {
                       decoration: const InputDecoration(
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                          borderSide: BorderSide(color: Colors.lightBlueAccent),
+                          borderSide: BorderSide(color: colorBlue),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                          borderSide: BorderSide(color: Colors.lightBlueAccent),
+                          borderSide: BorderSide(color: colorBlue),
                         ),
                       ),
                       style: Theme.of(context).textTheme.headline6,
@@ -73,11 +74,11 @@ class CheckOtpView extends GetView<CheckOtpController> {
                       decoration: const InputDecoration(
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                          borderSide: BorderSide(color: Colors.lightBlueAccent),
+                          borderSide: BorderSide(color: colorBlue),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                          borderSide: BorderSide(color: Colors.lightBlueAccent),
+                          borderSide: BorderSide(color: colorBlue),
                         ),
                       ),
                       style: Theme.of(context).textTheme.headline6,
@@ -102,11 +103,11 @@ class CheckOtpView extends GetView<CheckOtpController> {
                       decoration: const InputDecoration(
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                          borderSide: BorderSide(color: Colors.lightBlueAccent),
+                          borderSide: BorderSide(color: colorBlue),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                          borderSide: BorderSide(color: Colors.lightBlueAccent),
+                          borderSide: BorderSide(color: colorBlue),
                         ),
                       ),
                       style: Theme.of(context).textTheme.headline6,
@@ -131,11 +132,11 @@ class CheckOtpView extends GetView<CheckOtpController> {
                       decoration: const InputDecoration(
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                          borderSide: BorderSide(color: Colors.lightBlueAccent),
+                          borderSide: BorderSide(color: colorBlue),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                          borderSide: BorderSide(color: Colors.lightBlueAccent),
+                          borderSide: BorderSide(color: colorBlue),
                         ),
                       ),
                       style: Theme.of(context).textTheme.headline6,
@@ -160,11 +161,11 @@ class CheckOtpView extends GetView<CheckOtpController> {
                       decoration: const InputDecoration(
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                          borderSide: BorderSide(color: Colors.lightBlueAccent),
+                          borderSide: BorderSide(color: colorBlue),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                          borderSide: BorderSide(color: Colors.lightBlueAccent),
+                          borderSide: BorderSide(color: colorBlue),
                         ),
                       ),
                       style: Theme.of(context).textTheme.headline6,
@@ -189,11 +190,11 @@ class CheckOtpView extends GetView<CheckOtpController> {
                       decoration: const InputDecoration(
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                          borderSide: BorderSide(color: Colors.lightBlueAccent),
+                          borderSide: BorderSide(color: colorBlue),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                          borderSide: BorderSide(color: Colors.lightBlueAccent),
+                          borderSide: BorderSide(color: colorBlue),
                         ),
                       ),
                       style: Theme.of(context).textTheme.headline6,

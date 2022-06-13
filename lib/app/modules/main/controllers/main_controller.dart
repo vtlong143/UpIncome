@@ -14,7 +14,10 @@ class MainController extends GetxController {
     super.onReady();
   }
 
+  void changeTabIndex(int index) async {
+    count.value = index;
+  }
+
   @override
   void onClose() {}
-  void increment() => count.value++;
 }

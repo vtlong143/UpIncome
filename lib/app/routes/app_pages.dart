@@ -12,9 +12,9 @@ import '../modules/auth/signup/bindings/signup_binding.dart';
 import '../modules/auth/signup/views/signup_view.dart';
 import '../modules/choose_language/bindings/choose_language_binding.dart';
 import '../modules/choose_language/views/choose_language_view.dart';
-import '../modules/home/bindings/home_binding.dart';
-import '../modules/home/views/home_view.dart';
 import '../modules/main/bindings/main_binding.dart';
+import '../modules/main/transaction/bindings/transaction_binding.dart';
+import '../modules/main/transaction/views/transaction_view.dart';
 import '../modules/main/views/main_view.dart';
 import '../modules/onboarding/bindings/onboarding_binding.dart';
 import '../modules/onboarding/views/onboarding_view.dart';
@@ -29,11 +29,6 @@ class AppPages {
   static const INITIAL = Routes.SPLASH;
 
   static final routes = [
-    GetPage(
-      name: _Paths.HOME,
-      page: () => HomeView(),
-      binding: HomeBinding(),
-    ),
     GetPage(
       name: _Paths.SPLASH,
       page: () => SplashView(),
@@ -53,6 +48,13 @@ class AppPages {
       name: _Paths.MAIN,
       page: () => MainView(),
       binding: MainBinding(),
+      children: [
+        GetPage(
+          name: _Paths.TRANSACTION,
+          page: () => TransactionView(),
+          binding: TransactionBinding(),
+        ),
+      ],
     ),
     GetPage(
       name: _Paths.ONBOARDING,

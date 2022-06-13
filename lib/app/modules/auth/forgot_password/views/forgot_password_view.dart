@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:up_income/app/themes/colors.dart';
 import 'package:up_income/app/utils/locale.dart';
 
 import '../controllers/forgot_password_controller.dart';
@@ -37,11 +38,11 @@ class ForgotPasswordView extends GetView<ForgotPasswordController> {
                 decoration: InputDecoration(
                   border: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                    borderSide: BorderSide(color: Colors.lightBlueAccent),
+                    borderSide: BorderSide(color: colorBlue),
                   ),
                   focusedBorder: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                    borderSide: BorderSide(color: Colors.lightBlueAccent),
+                    borderSide: BorderSide(color: colorBlue),
                   ),
                   hintText: LocaleKeys.general_newPassword.tr,
                 ),
@@ -60,11 +61,11 @@ class ForgotPasswordView extends GetView<ForgotPasswordController> {
                   hintText: LocaleKeys.general_reenternewPassword.tr,
                   border: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                    borderSide: BorderSide(color: Colors.lightBlueAccent),
+                    borderSide: BorderSide(color: colorBlue),
                   ),
                   focusedBorder: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                    borderSide: BorderSide(color: Colors.lightBlueAccent),
+                    borderSide: BorderSide(color: colorBlue),
                   ),
                 ),
               ),

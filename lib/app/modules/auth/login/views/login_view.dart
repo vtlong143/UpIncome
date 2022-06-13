@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:up_income/app/routes/app_pages.dart';
+import 'package:up_income/app/themes/colors.dart';
 import 'package:up_income/app/utils/locale.dart';
 
 import '../controllers/login_controller.dart';
@@ -38,11 +39,11 @@ class LoginView extends GetView<LoginController> {
                 decoration: InputDecoration(
                   border: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                    borderSide: BorderSide(color: Colors.lightBlueAccent),
+                    borderSide: BorderSide(color: colorBlue),
                   ),
                   focusedBorder: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                    borderSide: BorderSide(color: Colors.lightBlueAccent),
+                    borderSide: BorderSide(color: colorBlue),
                   ),
                   hintText: LocaleKeys.general_phoneNumber.tr,
                 ),
@@ -61,11 +62,11 @@ class LoginView extends GetView<LoginController> {
                   hintText: LocaleKeys.general_passWord.tr,
                   border: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                    borderSide: BorderSide(color: Colors.lightBlueAccent),
+                    borderSide: BorderSide(color: colorBlue),
                   ),
                   focusedBorder: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                    borderSide: BorderSide(color: Colors.lightBlueAccent),
+                    borderSide: BorderSide(color: colorBlue),
                   ),
                 ),
               ),
@@ -89,7 +90,7 @@ class LoginView extends GetView<LoginController> {
                 },
                 child: Text(
                   LocaleKeys.general_forgotPassword.tr,
-                  style: const TextStyle(color: Colors.lightBlueAccent),
+                  style: const TextStyle(color: colorBlue),
                 ),
               ),
               const SizedBox(
